@@ -1,0 +1,40 @@
+{
+    "name": "andreaskiessling/auth-basic",
+    "type": "typo3-cms-extension",
+    "description": "Protect frontend pages via auth basic",
+    "authors": [
+        {
+            "name": "Andreas Kie\u00dfling",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5",
+        "middlewares/http-authentication": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "AndreasKiessling\\AuthBasic\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AndreasKiessling\\AuthBasic\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "andreaskiessling/auth-basic": "self.version",
+        "typo3-ter/authbasic": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/Web"
+        }
+    }
+}
