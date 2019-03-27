@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-03-27T00:04:17Z" product-name="authbasic">
+		<header/>
+		<body>
+			<trans-unit id="tx_authbasic_domain_model_page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_authbasic_domain_model_page.authbasic_active">
+				<source>Activate auth basic for this page and subpages</source>
+			</trans-unit>
+			<trans-unit id="tx_authbasic_domain_model_page.authbasic">
+				<source>Auth basic login data</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

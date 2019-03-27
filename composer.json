@@ -25,7 +25,7 @@
     },
     "replace": {
         "andreaskiessling/auth-basic": "self.version",
-        "typo3-ter/authbasic": "self.version"
+        "typo3-ter/auth-basic": "self.version"
     },
     "config": {
         "vendor-dir": ".Build/vendor",

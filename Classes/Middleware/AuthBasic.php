@@ -20,26 +20,37 @@ class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
     ): ResponseInterface
     {
 
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($request);
-
         /** @var \TYPO3\CMS\Core\Routing\PageArguments $pageArguments */
         $pageArguments = $request->getAttribute('routing');
         $pageId = $pageArguments->getPageId();
-        $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
-        $page = $pageRepository->getPage($pageId);
 
-        $rootlineUtility = GeneralUtility::makeInstance(RootlineUtility::class, $pageId);
-        $rootline = $rootlineUtility->get();
+        $rootLine = GeneralUtility::makeInstance(RootlineUtility::class, $pageId)->get();
 
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($rootline);
-        die();
+        $loginRequired = false;
+        $logins = [];
+        foreach ($rootLine as $page) {
+            if ((bool)$page['authbasic_active'] === true) {
+                $userData = GeneralUtility::trimExplode(chr(10), $page['authbasic'], true);
+                if (!empty($userData)) {
+                    $loginRequired = true;
 
-        $authData = new BasicAuthentication(
-            [
-                'test2' => 'test2',
-            ]
-        );
-        $response = $authData->process($request, $handler);
+                    $logins = [];
+                    foreach ($userData as $userLine) {
+                        list ($key, $value) = explode(':', $userLine, 2);
+                        $logins[$key] = $value;
+                    }
+                    break 1;
+                }
+            }
+        }
+
+        if ($loginRequired === true) {
+            $authData = new BasicAuthentication($logins);
+            $authData->realm('Protected area');
+            $response = $authData->process($request, $handler);
+        } else {
+            $response = $handler->handle($request);
+        }
 
         return $response;
     }
