@@ -19,10 +19,10 @@ composer require andreaskiessling/auth-basic dev-master
 ## Todos
 * add page overlay icon to show the protected status
 * configurable
-** add global IP whitelist configuration
-** probably respect devIPmask settings or skip protection for Development Context
-** skip Auth Basic if backend login is active
-** stop request on non https connections?
+ * add global IP whitelist configuration
+ * probably respect devIPmask settings or skip protection for Development Context
+ * skip Auth Basic if backend login is active
+ * stop request on non https connections?
 * test setup with proxy setups etc. 
 * improve code quality :smile:
 
