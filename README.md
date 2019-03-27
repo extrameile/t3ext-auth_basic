@@ -10,6 +10,11 @@ The login credentials are currently simple configured as is in plaintext
 username:password
 ~~~
 
+## Try out
+~~~
+composer config repositories.auth-basic vcs https://github.com/akiessling/t3ext-auth_basic.git
+composer require andreaskiessling/auth-basic dev-master
+~~~
 
 ## Todos
 * add page overlay icon to show the protected status
