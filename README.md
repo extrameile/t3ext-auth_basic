@@ -23,10 +23,12 @@ composer require andreaskiessling/auth-basic dev-master
   * probably respect devIPmask settings or skip protection for Development Context
   * skip Auth Basic if backend login is active
   * stop request on non https connections?
+  * Test / document usage with Apache/Nginx etc. because 
 * test setup with proxy setups etc. 
 * improve code quality :smile:
 
 ## Notes
-Kudos to https://www.qbus.de/qblog/psr-15-middlewares-fuer-typo3-cms-v9/ for the example implementation of how to use the API
+Kudos to https://www.qbus.de/qblog/psr-15-middlewares-fuer-typo3-cms-v9/ for the example implementation of how to use the API in TYPO3
+Kudos as well to https://github.com/middlewares/http-authentication#basicauthentication for providing an easy to use library for the auth basic stuff
 
  
