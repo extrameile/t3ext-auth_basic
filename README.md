@@ -22,6 +22,6 @@ username:password
 * improve code quality :smile:
 
 ## Notes
-Kudos to https://www.qbus.de/qblog/psr-15-middlewares-fuer-typo3-cms-v9/ for the example implementation.
+Kudos to https://www.qbus.de/qblog/psr-15-middlewares-fuer-typo3-cms-v9/ for the example implementation of how to use the API
 
  
