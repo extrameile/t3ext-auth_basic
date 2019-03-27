@@ -5,7 +5,7 @@
 
 Protect pages (and subpages) with an Auth Basic login by utilizing the Middleware API in TYPO3 9.5
 The extension is executed after the target page is determined and checks the rootline for an activated Auth Basic flag.
-The login credentials are currently simple configured as is in plaintext
+The login credentials are currently saved in plain text, split username and password with a colon, split multiple accounts by newline.
 ~~~
 username:password
 ~~~
