@@ -23,7 +23,9 @@ composer require andreaskiessling/auth-basic dev-master
   * probably respect devIPmask settings or skip protection for Development Context
   * skip Auth Basic if backend login is active
   * stop request on non https connections?
-  * Test / document usage with Apache/Nginx etc. because 
+  * skip in workspaces? Should previews be protectable with a login?
+* Test / document usage with Apache/Nginx etc. because 
+* Test / configure multilanguage setups
 * test setup with proxy setups etc. 
 * improve code quality :smile:
 
