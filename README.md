@@ -18,10 +18,10 @@ composer require andreaskiessling/auth-basic dev-master
 
 ## Todos
 * ~~add page overlay icon to show the protected status~~
-* configurable
+* configurable?
   * add global IP whitelist configuration
   * probably respect devIPmask settings or skip protection for Development Context
-  * skip Auth Basic if backend login is active
+  * ~~skip Auth Basic if backend login is active~~
   * stop request on non https connections?
   * skip in workspaces? Should previews be protectable with a login?
 * Test / document usage with Apache/Nginx etc. because 
