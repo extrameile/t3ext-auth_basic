@@ -20,6 +20,10 @@ class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
         $pageArguments = $request->getAttribute('routing');
         $pageId = $pageArguments->getPageId();
 
+        if ($this->skipLoginRequirement()) {
+            return $response = $handler->handle($request);
+        }
+
         $rootLine = GeneralUtility::makeInstance(RootlineUtility::class, $pageId)->get();
 
         $loginRequired = false;
@@ -53,5 +57,15 @@ class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
         }
 
         return $response;
+    }
+
+    /**
+     * Checks if the auth basic is needed at all
+     *
+     * @return bool
+     */
+    private function skipLoginRequirement()
+    {
+        return isset($GLOBALS['BE_USER']);
     }
 }
