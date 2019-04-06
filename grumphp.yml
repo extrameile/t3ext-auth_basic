@@ -55,13 +55,7 @@ parameters:
     yamllint:
       ignore_patterns: "%convention.yamllint_ignore_pattern%"
     securitychecker: ~
-    php_cs_slevomat:
-      ignore_patterns: "%convention.phpcslint_ignore_pattern%"
-      tab_width: 4
-      standard:
-      #- phpcs.xml
-      - phpcs-slevomat.xml
-      #- ./.Build/vendor/slevomat/coding-standard/SlevomatCodingStandard
+
 
   testsuites:
     phpcs:
