@@ -14,7 +14,7 @@
         "middlewares/http-authentication": "^1.1"
     },
     "require-dev": {
-        "povils/phpmnd": "^2.0",
+        "povils/phpmnd": "^2.1",
         "friendsofphp/php-cs-fixer": "^2.13",
         "jakub-onderka/php-parallel-lint": "^1.0",
         "maglnet/composer-require-checker": "^1.1",
