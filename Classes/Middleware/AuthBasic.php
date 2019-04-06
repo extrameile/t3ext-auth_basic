@@ -1,5 +1,4 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace AndreasKiessling\AuthBasic\Middleware;
 
@@ -9,16 +8,13 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
-use TYPO3\CMS\Frontend\Page\PageRepository;
-
 
 class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
 {
     public function process(
         ServerRequestInterface $request,
         RequestHandlerInterface $handler
-    ): ResponseInterface
-    {
+    ): ResponseInterface {
 
         /** @var \TYPO3\CMS\Core\Routing\PageArguments $pageArguments */
         $pageArguments = $request->getAttribute('routing');
@@ -28,17 +24,21 @@ class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
 
         $loginRequired = false;
         $logins = [];
+
         foreach ($rootLine as $page) {
             if ((bool)$page['authbasic_active'] === true) {
-                $userData = GeneralUtility::trimExplode(chr(10), $page['authbasic'], true);
+                $userData = GeneralUtility::trimExplode(\chr(10), $page['authbasic'], true);
+
                 if (!empty($userData)) {
                     $loginRequired = true;
 
                     $logins = [];
+
                     foreach ($userData as $userLine) {
-                        list ($key, $value) = explode(':', $userLine, 2);
+                        [$key, $value] = \explode(':', $userLine, 2);
                         $logins[$key] = $value;
                     }
+
                     break 1;
                 }
             }
@@ -54,6 +54,4 @@ class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
 
         return $response;
     }
-
-
 }

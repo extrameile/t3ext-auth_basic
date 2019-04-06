@@ -22,4 +22,3 @@ $tempColumns = [
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $tempColumns);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages', 'authbasic_active, authbasic', '', 'after:editlock');
-
