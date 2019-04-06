@@ -17,7 +17,7 @@ composer require andreaskiessling/auth-basic dev-master
 ~~~
 
 ## Todos
-* add page overlay icon to show the protected status
+* ~~add page overlay icon to show the protected status~~
 * configurable
   * add global IP whitelist configuration
   * probably respect devIPmask settings or skip protection for Development Context
@@ -30,7 +30,9 @@ composer require andreaskiessling/auth-basic dev-master
 * improve code quality :smile:
 
 ## Notes
+
 Kudos to https://www.qbus.de/qblog/psr-15-middlewares-fuer-typo3-cms-v9/ for the example implementation of how to use the API in TYPO3
+
 Kudos as well to https://github.com/middlewares/http-authentication#basicauthentication for providing an easy to use library for the auth basic stuff
 
  
