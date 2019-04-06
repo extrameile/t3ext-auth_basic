@@ -4,39 +4,27 @@
     "description": "Protect frontend pages via auth basic",
     "authors": [
         {
-            "name": "Andreas Kie\u00dfling",
+            "name": "Andreas Kießling",
             "role": "Developer"
         }
     ],
     "version": "1.0.0",
+    "repositories": {
+        "grumphp-conventions-typo3": {
+            "type": "vcs",
+            "url": "https://github.com/akiessling/grumphp-conventions-typo3.git"
+        }
+    },
     "require": {
         "typo3/cms-core": "^9.5",
         "middlewares/http-authentication": "^1.1"
     },
     "require-dev": {
-        "povils/phpmnd": "^2.1",
-        "friendsofphp/php-cs-fixer": "^2.13",
-        "jakub-onderka/php-parallel-lint": "^1.0",
-        "maglnet/composer-require-checker": "^1.1",
-        "phpmd/phpmd": "^2.6",
-        "phpspec/phpspec": "^5.1",
-        "phpstan/phpstan": "^0.11",
-        "sebastian/phpcpd": "^4.1",
-        "sensiolabs/security-checker": "^5.0",
-        "vimeo/psalm": "^3.0",
-        "phpro/grumphp": "^0.15",
-        "squizlabs/php_codesniffer": "^3.3",
-        "typo3/testing-framework": "4.12",
-        "slevomat/coding-standard": "^5.0"
+        "andreaskiessling/grumphp-conventions-typo3": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "AndreasKiessling\\AuthBasic\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "AndreasKiessling\\AuthBasic\\Tests\\": "Tests"
         }
     },
     "replace": {
@@ -52,10 +40,5 @@
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": ".Build/Web"
         }
-    },
-    "scripts": {
-        "check-style": "phpcs -p --standard=phpcs-slevomat.xml Classes",
-        "fix-style": "phpcbf -p --standard=phpcs-slevomat.xml --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1  Classes",
-        "phpcs": "phpcs -i"
     }
 }
