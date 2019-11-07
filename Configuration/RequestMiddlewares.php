@@ -5,8 +5,8 @@ return [
         'andreaskiessling/authbasic/authbasic' => [
             'target' => \AndreasKiessling\AuthBasic\Middleware\AuthBasic::class,
             'after' => [
-                'typo3/cms-frontend/page-resolver'
-            ]
+                'typo3/cms-frontend/page-resolver',
+            ],
         ],
     ],
 ];

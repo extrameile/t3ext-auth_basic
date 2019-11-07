@@ -7,7 +7,7 @@ $tempColumns = [
         'onChange' => 'reload',
         'config' => [
             'type' => 'check',
-        ]
+        ],
     ],
     'authbasic' => [
         'exclude' => true,
@@ -16,7 +16,7 @@ $tempColumns = [
         'config' => [
             'type' => 'text',
             'eval' => 'trim',
-        ]
+        ],
     ],
 ];
 

@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace AndreasKiessling\AuthBasic\Hooks;
 
@@ -16,7 +18,8 @@ class IconOverlay
      */
     public function postOverlayPriorityLookup(string $table, array $row, array $status, string $iconName)
     {
-        if ($table === 'pages'
+        if (
+            $table === 'pages'
             && (int)$row['authbasic_active'] === 1
         ) {
             return 'overlay-locked';
