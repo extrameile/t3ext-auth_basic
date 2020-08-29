@@ -68,6 +68,14 @@ class AuthBasic implements \Psr\Http\Server\MiddlewareInterface
      */
     private function skipLoginRequirement()
     {
-        return isset($GLOBALS['BE_USER']);
+        if (isset($GLOBALS['BE_USER'])) {
+            return true;
+        }
+
+        if (GeneralUtility::cmpIP(GeneralUtility::getIndpEnv('REMOTE_ADDR'), $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'])) {
+            return true;
+        }
+
+        return false;
     }
 }
