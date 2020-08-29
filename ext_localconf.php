@@ -8,3 +8,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Core\Imaging\IconFactory::c
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Backend\Tree\Repository\PageTreeRepository::class] = [
     'className' => \Extrameile\AuthBasic\Repository\PageTreeRepository::class
 ];
+
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][] = \Extrameile\AuthBasic\Hooks\PageTreeUpdateSignal::class;
