@@ -11,7 +11,7 @@
     "repositories": {
         "grumphp-conventions-typo3": {
             "type": "vcs",
-            "url": "https://github.com/akiessling/grumphp-conventions-typo3.git"
+            "url": "https://github.com/extrameile/grumphp-conventions-typo3.git"
         }
     },
     "require": {
