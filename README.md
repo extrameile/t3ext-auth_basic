@@ -1,5 +1,13 @@
 # WIP/Proof of concept - Not ready for production!
 
+## Usage with Apache
+
+You might need to add a configuration line to yout .htaccess so the Authorization Header is passed on to the middleware
+
+```
+# pass authorization header to TYPO3 so the middleware can handle it
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+```
 
 ## What does it do?
 
@@ -20,7 +28,7 @@ composer require extrameile/auth-basic dev-master
 * ~~add page overlay icon to show the protected status~~
 * configurable?
   * add global IP whitelist configuration
-  * probably respect devIPmask settings or skip protection for Development Context
+  * ~~probably respect devIPmask settings or skip protection for Development Context~~
   * ~~skip Auth Basic if backend login is active~~
   * stop request on non https connections?
   * skip in workspaces? Should previews be protectable with a login?
