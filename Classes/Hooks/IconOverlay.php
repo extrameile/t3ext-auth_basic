@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AndreasKiessling\AuthBasic\Hooks;
+namespace Extrameile\AuthBasic\Hooks;
 
 class IconOverlay
 {

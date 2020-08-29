@@ -1,5 +1,5 @@
 {
-    "name": "andreaskiessling/auth-basic",
+    "name": "extrameile/auth-basic",
     "type": "typo3-cms-extension",
     "description": "Protect frontend pages via auth basic",
     "authors": [
@@ -15,19 +15,19 @@
         }
     },
     "require": {
-        "typo3/cms-core": "^9.5",
-        "middlewares/http-authentication": "^1.1"
+        "typo3/cms-core": "^9.5 || ^10.4",
+        "middlewares/http-authentication": "^1.1 || ^2.1"
     },
     "require-dev": {
-        "andreaskiessling/grumphp-conventions-typo3": "dev-master"
+        "extrameile/grumphp-conventions-typo3": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "AndreasKiessling\\AuthBasic\\": "Classes"
+            "Extrameile\\AuthBasic\\": "Classes"
         }
     },
     "replace": {
-        "andreaskiessling/auth-basic": "self.version",
+        "extrameile/auth-basic": "self.version",
         "typo3-ter/auth-basic": "self.version"
     },
     "config": {

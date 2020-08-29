@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AndreasKiessling\AuthBasic\Repository;
+namespace Extrameile\AuthBasic\Repository;
 
 class PageTreeRepository extends \TYPO3\CMS\Backend\Tree\Repository\PageTreeRepository
 {

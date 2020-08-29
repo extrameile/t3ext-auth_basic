@@ -13,7 +13,7 @@ username:password
 ## Try out
 ~~~
 composer config repositories.auth-basic vcs https://github.com/akiessling/t3ext-auth_basic.git
-composer require andreaskiessling/auth-basic dev-master
+composer require extrameile/auth-basic dev-master
 ~~~
 
 ## Todos

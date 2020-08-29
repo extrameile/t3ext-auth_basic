@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AndreasKiessling\AuthBasic\Middleware;
+namespace Extrameile\AuthBasic\Middleware;
 
 use Middlewares\BasicAuthentication;
 use Psr\Http\Message\ResponseInterface;
