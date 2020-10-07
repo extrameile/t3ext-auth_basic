@@ -1,0 +1,2 @@
+# cat=secrity//20; type=string; label= Skip access check for these ips, separate multiple ones with commas
+allowedIps =
