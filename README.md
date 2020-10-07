@@ -1,5 +1,3 @@
-# WIP/Proof of concept - Not ready for production!
-
 ## Usage with Apache
 
 You might need to add a configuration line to yout .htaccess so the Authorization Header is passed on to the middleware
@@ -27,12 +25,12 @@ composer require extrameile/auth-basic dev-master
 ## Todos
 * ~~add page overlay icon to show the protected status~~
 * configurable?
-  * add global IP whitelist configuration
+  * ~~add global IP whitelist configuration~~
   * ~~probably respect devIPmask settings or skip protection for Development Context~~
   * ~~skip Auth Basic if backend login is active~~
   * stop request on non https connections?
   * skip in workspaces? Should previews be protectable with a login?
-* Test / document usage with Apache/Nginx etc. because 
+* Test / document usage with ~~Apache~~/Nginx etc.
 * Test / configure multilanguage setups
 * test setup with proxy setups etc. 
 * improve code quality :smile:
