@@ -3,6 +3,7 @@
 $tempColumns = [
     'authbasic_active' => [
         'exclude' => true,
+        'l10n_mode' => 'exclude',
         'label' => 'LLL:EXT:auth_basic/Resources/Private/Language/locallang_db.xlf:tx_authbasic_domain_model_page.authbasic_active',
         'onChange' => 'reload',
         'config' => [
@@ -11,6 +12,7 @@ $tempColumns = [
     ],
     'authbasic' => [
         'exclude' => true,
+        'l10n_mode' => 'exclude',
         'label' => 'LLL:EXT:auth_basic/Resources/Private/Language/locallang_db.xlf:tx_authbasic_domain_model_page.authbasic',
         'displayCond' => 'FIELD:authbasic_active:=:1',
         'config' => [
