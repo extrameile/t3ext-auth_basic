@@ -2,6 +2,7 @@
     "name": "extrameile/auth-basic",
     "type": "typo3-cms-extension",
     "description": "Protect frontend pages via auth basic",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Andreas Kießling",
